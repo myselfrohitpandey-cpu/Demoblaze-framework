@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HybridFramework2 by groups]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="GRP-regression,sanity,master(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+        <include name="sanity"/>
+        <include name="master"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testclasses.TC004_cartaddverification">
+        <methods>
+          <include name="purchasetest"/>
+        </methods>
+      </class> <!-- testclasses.TC004_cartaddverification -->
+      <class name="testclasses.TC005_purchaseverification">
+        <methods>
+          <include name="purchaseverification"/>
+        </methods>
+      </class> <!-- testclasses.TC005_purchaseverification -->
+      <class name="testclasses.TC002_Loginverification">
+        <methods>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- testclasses.TC002_Loginverification -->
+      <class name="testclasses.TC001_Registrationverification">
+        <methods>
+          <include name="testrun"/>
+        </methods>
+      </class> <!-- testclasses.TC001_Registrationverification -->
+    </classes>
+  </test> <!-- GRP-regression,sanity,master(failed) -->
+</suite> <!-- Failed suite [HybridFramework2 by groups] -->
