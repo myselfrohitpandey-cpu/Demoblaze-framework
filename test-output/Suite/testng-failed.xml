@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testclasses.TC003_Dataprovider">
+      <class name="testclasses.TC005_purchaseverification">
         <methods>
-          <include name="loginTest" invocation-numbers="2"/>
+          <include name="purchaseverification"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- testclasses.TC003_Dataprovider -->
+      </class> <!-- testclasses.TC005_purchaseverification -->
+      <class name="testclasses.TC002_Loginverification">
+        <methods>
+          <include name="loginTest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testclasses.TC002_Loginverification -->
+      <class name="testclasses.TC001_Registrationverification">
+        <methods>
+          <include name="testrun"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testclasses.TC001_Registrationverification -->
+      <class name="testclasses.TC004_cartaddverification">
+        <methods>
+          <include name="setup"/>
+          <include name="purchasetest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testclasses.TC004_cartaddverification -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

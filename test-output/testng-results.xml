@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-14T09:45:35 GMT-07:00" name="Suite" finished-at="2025-08-14T09:46:04 GMT-07:00" duration-ms="29042">
+  <suite started-at="2025-08-15T01:24:35 GMT-07:00" name="Default suite" finished-at="2025-08-15T01:24:59 GMT-07:00" duration-ms="24529">
     <groups>
-      <group name="sanity">
-        <method signature="TC001_Registrationverification.testrun()[pri:0, instance:testclasses.TC001_Registrationverification@6f8e8894]" name="testrun" class="testclasses.TC001_Registrationverification"/>
-        <method signature="TC001_Registrationverification.testrun()[pri:0, instance:testclasses.TC001_Registrationverification@3fa247d1]" name="testrun" class="testclasses.TC001_Registrationverification"/>
-      </group> <!-- sanity -->
+      <group name="regression">
+        <method signature="TC002_Loginverification.loginTest()[pri:0, instance:testclasses.TC002_Loginverification@34b9f960]" name="loginTest" class="testclasses.TC002_Loginverification"/>
+      </group> <!-- regression -->
       <group name="master">
-        <method signature="TC001_Registrationverification.testrun()[pri:0, instance:testclasses.TC001_Registrationverification@6f8e8894]" name="testrun" class="testclasses.TC001_Registrationverification"/>
-        <method signature="TC001_Registrationverification.testrun()[pri:0, instance:testclasses.TC001_Registrationverification@3fa247d1]" name="testrun" class="testclasses.TC001_Registrationverification"/>
+        <method signature="TC002_Loginverification.loginTest()[pri:0, instance:testclasses.TC002_Loginverification@34b9f960]" name="loginTest" class="testclasses.TC002_Loginverification"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2025-08-14T09:45:35 GMT-07:00" name="chrometest" finished-at="2025-08-14T09:45:57 GMT-07:00" duration-ms="21960">
-      <class name="testclasses.TC001_Registrationverification">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testclasses.TC001_Registrationverification@6f8e8894]" started-at="2025-08-14T09:45:36 GMT-07:00" name="setup" finished-at="2025-08-14T09:45:44 GMT-07:00" duration-ms="8010" status="PASS">
+    <test started-at="2025-08-15T01:24:35 GMT-07:00" name="Default test" finished-at="2025-08-15T01:24:59 GMT-07:00" duration-ms="24529">
+      <class name="testclasses.TC002_Loginverification">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testclasses.TC002_Loginverification@34b9f960]" started-at="2025-08-15T01:24:35 GMT-07:00" name="setup" finished-at="2025-08-15T01:24:53 GMT-07:00" duration-ms="18092" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,38 +24,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testrun()[pri:0, instance:testclasses.TC001_Registrationverification@6f8e8894]" started-at="2025-08-14T09:45:44 GMT-07:00" name="testrun" finished-at="2025-08-14T09:45:51 GMT-07:00" duration-ms="7006" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:testclasses.TC002_Loginverification@34b9f960]" started-at="2025-08-15T01:24:53 GMT-07:00" name="loginTest" finished-at="2025-08-15T01:24:59 GMT-07:00" duration-ms="5759" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testrun -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.TC001_Registrationverification@6f8e8894]" started-at="2025-08-14T09:45:51 GMT-07:00" name="teardown" finished-at="2025-08-14T09:45:57 GMT-07:00" duration-ms="5470" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testclasses.TC001_Registrationverification -->
-    </test> <!-- chrometest -->
-    <test started-at="2025-08-14T09:45:35 GMT-07:00" name="firefoxtest" finished-at="2025-08-14T09:46:04 GMT-07:00" duration-ms="29042">
-      <class name="testclasses.TC001_Registrationverification">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testclasses.TC001_Registrationverification@3fa247d1]" started-at="2025-08-14T09:45:36 GMT-07:00" name="setup" finished-at="2025-08-14T09:46:00 GMT-07:00" duration-ms="23755" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testrun()[pri:0, instance:testclasses.TC001_Registrationverification@3fa247d1]" started-at="2025-08-14T09:46:00 GMT-07:00" name="testrun" finished-at="2025-08-14T09:46:02 GMT-07:00" duration-ms="2319" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testrun -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.TC001_Registrationverification@3fa247d1]" started-at="2025-08-14T09:46:02 GMT-07:00" name="teardown" finished-at="2025-08-14T09:46:04 GMT-07:00" duration-ms="1586" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.TC002_Loginverification@34b9f960]" started-at="2025-08-15T01:24:59 GMT-07:00" name="teardown" finished-at="2025-08-15T01:24:59 GMT-07:00" duration-ms="550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testclasses.TC001_Registrationverification -->
-    </test> <!-- firefoxtest -->
-  </suite> <!-- Suite -->
+      </class> <!-- testclasses.TC002_Loginverification -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -37,6 +37,7 @@ public class Basetest{
 	 public String email;
 	 public String url;
 	 public String password;
+	public  FileInputStream file;
 
 @BeforeClass(groups= {"sanity","regression","master"})
 @Parameters("browser")
@@ -47,17 +48,19 @@ public void setup(@Optional("chrome")String br) {
 	 WebDriverManager.chromedriver().setup();
 	 
 	 try{
-			FileInputStream file=new FileInputStream("C:\\Users\\RPG\\eclipse-workspace\\HybridFramework2\\src\\test\\resources\\config.properties");
+			 file=new FileInputStream(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
 			
 			Properties p=new Properties();
 			p.load(file);
 			email= p.getProperty("email");
 			password= p.getProperty("password");
 			url= p.getProperty("url");
+			
 			}
 			catch(IOException e) {
 				e.printStackTrace();
 			}
+	 
 
 	  
 	  switch(br.toLowerCase()){
@@ -76,8 +79,10 @@ public void setup(@Optional("chrome")String br) {
 }
 
 @AfterClass(groups= {"sanity","regression","master"})
-public void teardown() {
+public void teardown() throws IOException {
 	driver.quit();
+	file.close();
+	
 }
 
 public String randomString() {
